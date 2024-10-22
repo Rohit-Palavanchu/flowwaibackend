@@ -18,28 +18,28 @@ Content-Type: application/json
 
 ### Add a new transaction (Replace YOUR_JWT_TOKEN_HERE with the token from login response)
 POST http://localhost:3000/transaction/transactions
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI5NjE1MTk0LCJleHAiOjE3Mjk2MTg3OTR9.6feacG31qhPNfFX8TOC8dCIf9lD9i2Q3jtWDYpLMB5c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI5NjE5MDU0LCJleHAiOjE3Mjk2MjI2NTR9.mqoTNTQbhCQ7zo3QNqGjLcPx978Zwo_p4tzC14MLKx0
 Content-Type: application/json
 
 {
-  "type": "expense",
+  "type": "income",
   "category": 1,
-  "amount": 500,
+  "amount": 50000,
   "date": "2024-10-22",
-  "description": "Groceries"
+  "description": "salary"
 }
 
 ### Retrieve all transactions (with pagination)
 GET http://localhost:3000/transaction/transactions?page=1&limit=10
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI5NjE1MTk0LCJleHAiOjE3Mjk2MTg3OTR9.6feacG31qhPNfFX8TOC8dCIf9lD9i2Q3jtWDYpLMB5c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI5NjE5MDU0LCJleHAiOjE3Mjk2MjI2NTR9.mqoTNTQbhCQ7zo3QNqGjLcPx978Zwo_p4tzC14MLKx0
 
 ### Retrieve a transaction by ID
 GET http://localhost:3000/transaction/transactions/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI5NjE1MTk0LCJleHAiOjE3Mjk2MTg3OTR9.6feacG31qhPNfFX8TOC8dCIf9lD9i2Q3jtWDYpLMB5c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI5NjE5MDU0LCJleHAiOjE3Mjk2MjI2NTR9.mqoTNTQbhCQ7zo3QNqGjLcPx978Zwo_p4tzC14MLKx0
 
 ### Update a transaction
 PUT http://localhost:3000/transaction/transactions/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI5NjE1MTk0LCJleHAiOjE3Mjk2MTg3OTR9.6feacG31qhPNfFX8TOC8dCIf9lD9i2Q3jtWDYpLMB5c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI5NjE5MDU0LCJleHAiOjE3Mjk2MjI2NTR9.mqoTNTQbhCQ7zo3QNqGjLcPx978Zwo_p4tzC14MLKx0
 Content-Type: application/json
 
 {
@@ -51,11 +51,11 @@ Content-Type: application/json
 }
 
 ### Delete a transaction
-DELETE http://localhost:3000/transaction/transactions/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI5NjE1MTk0LCJleHAiOjE3Mjk2MTg3OTR9.6feacG31qhPNfFX8TOC8dCIf9lD9i2Q3jtWDYpLMB5c
+DELETE http://localhost:3000/transaction/transactions/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI5NjE5MDU0LCJleHAiOjE3Mjk2MjI2NTR9.mqoTNTQbhCQ7zo3QNqGjLcPx978Zwo_p4tzC14MLKx0
 
 ###
 
 ### Get Transaction Summary (Protected)
 GET http://localhost:3000/transaction/summary?startDate=2024-01-01&endDate=2024-12-31
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI5NjE3ODQ3LCJleHAiOjE3Mjk2MjE0NDd9.z8VDoYu1wmUCKcXVmXRo1FD-YKg4xEoDyZhClvUCS3E
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI5NjE5MDU0LCJleHAiOjE3Mjk2MjI2NTR9.mqoTNTQbhCQ7zo3QNqGjLcPx978Zwo_p4tzC14MLKx0

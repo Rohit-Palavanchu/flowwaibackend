@@ -1,3 +1,4 @@
+// required routes and npm modules
 const express = require('express');
 const router = express.Router();
 const db = require('../models/db');
@@ -224,8 +225,5 @@ router.get('/summary', middleware, (req, res) => {
         res.status(200).json({ totalIncome, totalExpenses, balance });
     });
 });
-
-module.exports = router;
-
 
 module.exports = router;

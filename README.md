@@ -1,6 +1,4 @@
-Here's the `README.md` with placeholders for your screenshots:
-
-```markdown
+Here's the `README.md`
 # Transaction Management API
 
 Welcome to the Transaction Management API! This project lets you manage your financial transactions (like income and expenses) while securing access with user authentication through JWT tokens. You can register users, log in, and perform all CRUD operations on transactions. It's built with Node.js, Express, and SQLite, making it lightweight and simple to use.
