@@ -244,8 +244,7 @@ Authorization: Bearer <JWT_TOKEN>
 - `404 Not Found`: Transaction not found.
 
 #### _Screenshot:_
-![Delete Transaction Screenshot](./screenshots/delete-transaction.png)
-_([Upload your delete transaction screenshot here](#))_
+![Delete Transaction Screenshot](https://github.com/user-attachments/assets/c9be753f-7efe-47f1-a9ec-75a9965212ee)
 
 ---
 
@@ -266,7 +265,7 @@ Authorization: Bearer <JWT_TOKEN>
 #### _Screenshot:_
 ![Transaction Summary Screenshot](https://github.com/user-attachments/assets/aede4525-53a2-488a-91bb-844c124fd2d6)
 
-![Delete Transaction Screenshot](https://github.com/user-attachments/assets/c9be753f-7efe-47f1-a9ec-75a9965212ee)
+
 
 ---
 ## Notes
