@@ -1,0 +1,56 @@
+### Register a new user
+POST http://localhost:3000/transaction/register
+Content-Type: application/json
+
+{
+  "username": "john_doe",
+  "password": "password123"
+}
+
+### Login user
+POST http://localhost:3000/transaction/login
+Content-Type: application/json
+
+{
+  "username": "john_doe",
+  "password": "password123"
+}
+
+### Add a new transaction (Replace YOUR_JWT_TOKEN_HERE with the token from login response)
+POST http://localhost:3000/transaction/transactions
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI5NjEzMzQwLCJleHAiOjE3Mjk2MTY5NDB9.FeeqW_l4_IX_sHE39LvltSBzTD210GZYpmi5rdMS2TA
+Content-Type: application/json
+
+{
+  "type": "expense",
+  "category": 1,
+  "amount": 500,
+  "date": "2024-10-22",
+  "description": "Groceries"
+}
+
+### Retrieve all transactions (with pagination)
+GET http://localhost:3000/transaction/transactions?page=1&limit=10
+Authorization: Bearer YOUR_JWT_TOKEN_HERE
+
+### Retrieve a transaction by ID
+GET http://localhost:3000/transaction/transactions/1
+Authorization: Bearer YOUR_JWT_TOKEN_HERE
+
+### Update a transaction
+PUT http://localhost:3000/transaction/transactions/1
+Authorization: Bearer YOUR_JWT_TOKEN_HERE
+Content-Type: application/json
+
+{
+  "type": "expense",
+  "category": 4,
+  "amount": 300,
+  "date": "2024-10-22",
+  "description": "Updated description"
+}
+
+### Delete a transaction
+DELETE http://localhost:3000/transaction/transactions/1
+Authorization: Bearer YOUR_JWT_TOKEN_HERE
+
