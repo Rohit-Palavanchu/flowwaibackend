@@ -18,7 +18,7 @@ Content-Type: application/json
 
 ### Add a new transaction (Replace YOUR_JWT_TOKEN_HERE with the token from login response)
 POST http://localhost:3000/transaction/transactions
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI5NjEzMzQwLCJleHAiOjE3Mjk2MTY5NDB9.FeeqW_l4_IX_sHE39LvltSBzTD210GZYpmi5rdMS2TA
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI5NjE1MTk0LCJleHAiOjE3Mjk2MTg3OTR9.6feacG31qhPNfFX8TOC8dCIf9lD9i2Q3jtWDYpLMB5c
 Content-Type: application/json
 
 {
@@ -31,15 +31,15 @@ Content-Type: application/json
 
 ### Retrieve all transactions (with pagination)
 GET http://localhost:3000/transaction/transactions?page=1&limit=10
-Authorization: Bearer YOUR_JWT_TOKEN_HERE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI5NjE1MTk0LCJleHAiOjE3Mjk2MTg3OTR9.6feacG31qhPNfFX8TOC8dCIf9lD9i2Q3jtWDYpLMB5c
 
 ### Retrieve a transaction by ID
-GET http://localhost:3000/transaction/transactions/1
-Authorization: Bearer YOUR_JWT_TOKEN_HERE
+GET http://localhost:3000/transaction/transactions/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI5NjE1MTk0LCJleHAiOjE3Mjk2MTg3OTR9.6feacG31qhPNfFX8TOC8dCIf9lD9i2Q3jtWDYpLMB5c
 
 ### Update a transaction
 PUT http://localhost:3000/transaction/transactions/1
-Authorization: Bearer YOUR_JWT_TOKEN_HERE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI5NjE1MTk0LCJleHAiOjE3Mjk2MTg3OTR9.6feacG31qhPNfFX8TOC8dCIf9lD9i2Q3jtWDYpLMB5c
 Content-Type: application/json
 
 {
@@ -52,5 +52,5 @@ Content-Type: application/json
 
 ### Delete a transaction
 DELETE http://localhost:3000/transaction/transactions/1
-Authorization: Bearer YOUR_JWT_TOKEN_HERE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI5NjE1MTk0LCJleHAiOjE3Mjk2MTg3OTR9.6feacG31qhPNfFX8TOC8dCIf9lD9i2Q3jtWDYpLMB5c
 

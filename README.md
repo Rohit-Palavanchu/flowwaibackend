@@ -1,4 +1,4 @@
-Here’s a more conversational and human-friendly `README.md` for your project:
+Here's the `README.md` with placeholders for your screenshots:
 
 ```markdown
 # Transaction Management API
@@ -16,8 +16,8 @@ Welcome to the Transaction Management API! This project lets you manage your fin
 First, you'll need to clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/Rohit-Palavanchu/flowwaibackend
-cd flowwaibackend
+git clone <repository-url>
+cd <repository-folder>
 ```
 
 ### 2. Install dependencies
@@ -106,6 +106,12 @@ Create a new user account.
 - `201 Created`: User registered successfully.
 - `400 Bad Request`: Username or password missing, or user already exists.
 
+#### _Screenshot:_
+![User Registration Screenshot](./screenshots/register.png)
+_([Upload your registration form screenshot here](#))_
+
+---
+
 #### 2. Login
 **POST** `/transaction/login`
 
@@ -122,6 +128,12 @@ Authenticate and get a JWT token.
 **Response**:
 - `200 OK`: Login successful, returns a JWT token.
 - `401 Unauthorized`: Invalid username or password.
+
+#### _Screenshot:_
+![Login Page Screenshot](./screenshots/login.png)
+_([Upload your login screenshot here](#))_
+
+---
 
 #### 3. Add a Transaction (Protected)
 **POST** `/transaction/transactions`
@@ -148,6 +160,12 @@ Authorization: Bearer <JWT_TOKEN>
 - `201 Created`: Transaction added successfully.
 - `400 Bad Request`: Missing or invalid data.
 
+#### _Screenshot:_
+![Add Transaction Screenshot](./screenshots/add-transaction.png)
+_([Upload your add transaction screenshot here](#))_
+
+---
+
 #### 4. Get All Transactions (Protected, with Pagination)
 **GET** `/transaction/transactions?page=1&limit=10`
 
@@ -162,6 +180,12 @@ Authorization: Bearer <JWT_TOKEN>
 - `200 OK`: Returns a list of transactions.
 - `500 Internal Server Error`: Issue retrieving transactions.
 
+#### _Screenshot:_
+![Get Transactions Screenshot](./screenshots/get-transactions.png)
+_([Upload your get transactions screenshot here](#))_
+
+---
+
 #### 5. Get a Transaction by ID (Protected)
 **GET** `/transaction/transactions/:id`
 
@@ -175,6 +199,12 @@ Authorization: Bearer <JWT_TOKEN>
 **Response**:
 - `200 OK`: Returns the transaction details.
 - `404 Not Found`: Transaction not found.
+
+#### _Screenshot:_
+![Transaction Detail Screenshot](./screenshots/transaction-detail.png)
+_([Upload your transaction detail screenshot here](#))_
+
+---
 
 #### 6. Update a Transaction (Protected)
 **PUT** `/transaction/transactions/:id`
@@ -201,6 +231,12 @@ Authorization: Bearer <JWT_TOKEN>
 - `200 OK`: Transaction updated successfully.
 - `404 Not Found`: Transaction not found.
 
+#### _Screenshot:_
+![Update Transaction Screenshot](./screenshots/update-transaction.png)
+_([Upload your update transaction screenshot here](#))_
+
+---
+
 #### 7. Delete a Transaction (Protected)
 **DELETE** `/transaction/transactions/:id`
 
@@ -214,6 +250,12 @@ Authorization: Bearer <JWT_TOKEN>
 **Response**:
 - `200 OK`: Transaction deleted successfully.
 - `404 Not Found`: Transaction not found.
+
+#### _Screenshot:_
+![Delete Transaction Screenshot](./screenshots/delete-transaction.png)
+_([Upload your delete transaction screenshot here](#))_
+
+---
 
 #### 8. Transaction Summary (Protected)
 **GET** `/transaction/summary`
@@ -229,6 +271,10 @@ Authorization: Bearer <JWT_TOKEN>
 - `200 OK`: Returns the transaction summary.
 - `500 Internal Server Error`: Issue retrieving the summary.
 
+#### _Screenshot:_
+![Transaction Summary Screenshot](./screenshots/summary.png)
+_([Upload your transaction summary screenshot here](#))_
+
 ## Notes
 - Ensure that you handle your JWT tokens securely. Do not expose them in client-side code.
 - Adjust the database settings and environment variables as needed for production use.
@@ -242,10 +288,3 @@ Authorization: Bearer <JWT_TOKEN>
 
 That's it! You're ready to manage your transactions 🚀. Feel free to expand this API or customize it to your needs.
 ```
-
-### Summary:
-- **Setup**: Clear steps for cloning, installing dependencies, setting up the database, and starting the server.
-- **API Docs**: Includes endpoints for user registration, login, transaction management, and authentication.
-- **Token usage**: Instructions for JWT token in protected routes.
-
-Let me know if you need any tweaks!
