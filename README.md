@@ -16,8 +16,8 @@ Welcome to the Transaction Management API! This project lets you manage your fin
 First, you'll need to clone this repository to your local machine:
 
 ```bash
-git clone <repository-url>
-cd <repository-folder>
+git clone https://github.com/Rohit-Palavanchu/flowwaibackend
+cd flowwaibackend
 ```
 
 ### 2. Install dependencies
