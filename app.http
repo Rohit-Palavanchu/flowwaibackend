@@ -34,7 +34,7 @@ GET http://localhost:3000/transaction/transactions?page=1&limit=10
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI5NjE1MTk0LCJleHAiOjE3Mjk2MTg3OTR9.6feacG31qhPNfFX8TOC8dCIf9lD9i2Q3jtWDYpLMB5c
 
 ### Retrieve a transaction by ID
-GET http://localhost:3000/transaction/transactions/4
+GET http://localhost:3000/transaction/transactions/1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI5NjE1MTk0LCJleHAiOjE3Mjk2MTg3OTR9.6feacG31qhPNfFX8TOC8dCIf9lD9i2Q3jtWDYpLMB5c
 
 ### Update a transaction
@@ -54,3 +54,8 @@ Content-Type: application/json
 DELETE http://localhost:3000/transaction/transactions/1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI5NjE1MTk0LCJleHAiOjE3Mjk2MTg3OTR9.6feacG31qhPNfFX8TOC8dCIf9lD9i2Q3jtWDYpLMB5c
 
+###
+
+### Get Transaction Summary (Protected)
+GET http://localhost:3000/transaction/summary?startDate=2024-01-01&endDate=2024-12-31
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI5NjE3ODQ3LCJleHAiOjE3Mjk2MjE0NDd9.z8VDoYu1wmUCKcXVmXRo1FD-YKg4xEoDyZhClvUCS3E

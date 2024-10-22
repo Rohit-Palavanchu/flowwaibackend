@@ -184,4 +184,48 @@ router.delete('/transactions/:id', middleware, (req, res) => {
     });
 });
 
+
+router.get('/summary', middleware, (req, res) => {
+    const userId = req.user.id;
+    const { startDate, endDate, categoryId } = req.query;
+
+    let query = `
+        SELECT
+            SUM(CASE WHEN type = 'income' THEN amount ELSE 0 END) AS totalIncome,
+            SUM(CASE WHEN type = 'expense' THEN amount ELSE 0 END) AS totalExpenses
+        FROM transactions
+        WHERE userId = ?
+    `;
+    const params = [userId];
+
+    if (startDate) {
+        query += ' AND date >= ?';
+        params.push(startDate);
+    }
+    if (endDate) {
+        query += ' AND date <= ?';
+        params.push(endDate);
+    }
+    if (categoryId) {
+        query += ' AND category = ?';
+        params.push(categoryId);
+    }
+
+    db.get(query, params, (err, row) => {
+        if (err) {
+            console.error('Error retrieving transaction summary:', err);
+            return res.status(500).json({ error: 'Internal server error while retrieving summary' });
+        }
+
+        const totalIncome = row.totalIncome || 0;
+        const totalExpenses = row.totalExpenses || 0;
+        const balance = totalIncome - totalExpenses;
+
+        res.status(200).json({ totalIncome, totalExpenses, balance });
+    });
+});
+
+module.exports = router;
+
+
 module.exports = router;

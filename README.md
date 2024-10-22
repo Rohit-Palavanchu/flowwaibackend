@@ -272,8 +272,7 @@ Authorization: Bearer <JWT_TOKEN>
 - `500 Internal Server Error`: Issue retrieving the summary.
 
 #### _Screenshot:_
-![Transaction Summary Screenshot](./screenshots/summary.png)
-_([Upload your transaction summary screenshot here](#))_
+![Transaction Summary Screenshot](https://github.com/user-attachments/assets/aede4525-53a2-488a-91bb-844c124fd2d6)
 
 ## Notes
 - Ensure that you handle your JWT tokens securely. Do not expose them in client-side code.
