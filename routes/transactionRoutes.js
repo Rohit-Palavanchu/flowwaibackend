@@ -3,7 +3,7 @@ const router = express.Router();
 const db = require('../models/db');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const { v4: uuidv4 } = require('uuid');
+// const { v4: uuidv4 } = require('uuid');
 
 // Register a new user
 router.post('/register', (req, res) => {
@@ -113,11 +113,11 @@ router.get('/transactions', middleware, (req, res) => {
             const totalPages = Math.ceil(total / limit);
 
             res.status(200).json({
-                total,
-                page: parseInt(page),
-                limit: parseInt(limit),
-                totalPages,
-                data: rows
+                total,     // total results in the table
+                page: parseInt(page), // page the result should be in 
+                limit: parseInt(limit),  // limit a page should have(offset limit)
+                totalPages,  
+                data: rows   // returned rows
             });
         });
     });
