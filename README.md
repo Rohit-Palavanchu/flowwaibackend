@@ -107,8 +107,7 @@ Create a new user account.
 - `400 Bad Request`: Username or password missing, or user already exists.
 
 #### _Screenshot:_
-![User Registration Screenshot](./screenshots/register.png)
-_([Upload your registration form screenshot here](#))_
+![User Registration Screenshot](https://github.com/user-attachments/assets/94d07e22-e93d-435a-8a94-e8da08abe405)
 
 ---
 
@@ -130,9 +129,7 @@ Authenticate and get a JWT token.
 - `401 Unauthorized`: Invalid username or password.
 
 #### _Screenshot:_
-![Login Page Screenshot](./screenshots/login.png)
-_([Upload your login screenshot here](#))_
-
+![Login Page Screenshot](https://github.com/user-attachments/assets/b320fea5-936f-4a78-ae3b-d1dec6e78f75)
 ---
 
 #### 3. Add a Transaction (Protected)
@@ -161,8 +158,7 @@ Authorization: Bearer <JWT_TOKEN>
 - `400 Bad Request`: Missing or invalid data.
 
 #### _Screenshot:_
-![Add Transaction Screenshot](./screenshots/add-transaction.png)
-_([Upload your add transaction screenshot here](#))_
+![Add Transaction Screenshot](https://github.com/user-attachments/assets/d9c86832-c570-4b62-b1d7-ef4c4fac3a65)
 
 ---
 
@@ -181,8 +177,7 @@ Authorization: Bearer <JWT_TOKEN>
 - `500 Internal Server Error`: Issue retrieving transactions.
 
 #### _Screenshot:_
-![Get Transactions Screenshot](./screenshots/get-transactions.png)
-_([Upload your get transactions screenshot here](#))_
+![Get Transactions Screenshot](https://github.com/user-attachments/assets/c9d525cf-ed3c-484d-be69-4d42723a7277)
 
 ---
 
@@ -201,8 +196,7 @@ Authorization: Bearer <JWT_TOKEN>
 - `404 Not Found`: Transaction not found.
 
 #### _Screenshot:_
-![Transaction Detail Screenshot](./screenshots/transaction-detail.png)
-_([Upload your transaction detail screenshot here](#))_
+![Transaction Detail Screenshot](https://github.com/user-attachments/assets/98048dbd-ff6a-4cc1-ac4f-6594ad123ef7)
 
 ---
 
@@ -232,9 +226,7 @@ Authorization: Bearer <JWT_TOKEN>
 - `404 Not Found`: Transaction not found.
 
 #### _Screenshot:_
-![Update Transaction Screenshot](./screenshots/update-transaction.png)
-_([Upload your update transaction screenshot here](#))_
-
+![Update Transaction Screenshot](https://github.com/user-attachments/assets/0f8d7c06-1364-4431-980e-f0bbb411380e)
 ---
 
 #### 7. Delete a Transaction (Protected)
@@ -252,29 +244,9 @@ Authorization: Bearer <JWT_TOKEN>
 - `404 Not Found`: Transaction not found.
 
 #### _Screenshot:_
-![Delete Transaction Screenshot](./screenshots/delete-transaction.png)
-_([Upload your delete transaction screenshot here](#))_
+![Delete Transaction Screenshot](https://github.com/user-attachments/assets/c9be753f-7efe-47f1-a9ec-75a9965212ee)
 
 ---
-
-#### 8. Transaction Summary (Protected)
-**GET** `/transaction/summary`
-
-Retrieve a summary of your transactions, such as total income, total expenses, and balance. You can filter by date or category.
-
-**Headers**:
-```
-Authorization: Bearer <JWT_TOKEN>
-```
-
-**Response**:
-- `200 OK`: Returns the transaction summary.
-- `500 Internal Server Error`: Issue retrieving the summary.
-
-#### _Screenshot:_
-![Transaction Summary Screenshot](./screenshots/summary.png)
-_([Upload your transaction summary screenshot here](#))_
-
 ## Notes
 - Ensure that you handle your JWT tokens securely. Do not expose them in client-side code.
 - Adjust the database settings and environment variables as needed for production use.
